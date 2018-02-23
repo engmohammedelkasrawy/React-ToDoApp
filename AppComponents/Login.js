@@ -27,7 +27,7 @@ class Login extends Component {
 }
 const styling = StyleSheet.create({
     login: {
-        backgroundColor: 'red',
+        backgroundColor: '#FEF4E8',
         height: 80,
         alignItems: 'center',
         justifyContent: 'center'
