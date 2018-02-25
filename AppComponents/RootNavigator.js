@@ -5,17 +5,18 @@ import Login from './Login';
 
 
 const RootNavigator = StackNavigator({
-  Home: { 
+   Login: { 
+            screen: Login ,       
+            navigationOptions:{
+             title: "Login"
+        }},
+    
+    Home: { 
         screen: Home,
         navigationOptions:{
          title: "Home"
         }
-},
-  Login: { 
-            screen: Login ,       
-            navigationOptions:{
-             title: "Login"
-        }
-          },
+}
+          
 });
 export default RootNavigator;

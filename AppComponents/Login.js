@@ -4,38 +4,48 @@ import {
     Text,
     View
 } from 'react-native';
+import {Button, Card, CardItem, Input} from './Common';
 
 class Login extends Component {
     constructor(){
         super();
         this.state ={
-        title : 'Login'
+        title : 'Login',
+        userName:'',
+        password:''     
         };
+    }
+     onLogin(){
+        console.log(`user name is ${this.state.userName} and password is ${this.state.password}`);
     }
     render() {
         return ( 
-            <View style = { styling.header } >
-
+            <Card>
+            <CardItem>
+            <Input 
+            lable="E-Mail"
+            placeholder="enter E-Maill address"
+            secureTextEntry={false}
+            onChangeText = {(userName)=> this.setState({userName})}
+            />
             
-            <Text> Login < /Text> 
-
-
+            </CardItem>
+             <CardItem>
+            <Input 
+            lable="Password"
+            placeholder="enter Password address"
+            secureTextEntry={true}
+            onChangeText = {(password)=>this.setState({password})}
+            />
             
-            </View >
+            </CardItem>
+            <CardItem>
+            <Button onPress ={this.onLogin.bind(this)}>Login</Button>
+            </CardItem>
+            </Card>
         );
     }
+   
 }
-const styling = StyleSheet.create({
-    login: {
-        backgroundColor: '#FEF4E8',
-        height: 80,
-        alignItems: 'center',
-        justifyContent: 'center'
 
-    },
-    text: {
-        fontSize: 15,
-        fontWeight: 'bold'
-    }
-});
 export default Login;

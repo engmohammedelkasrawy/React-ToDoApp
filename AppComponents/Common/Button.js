@@ -9,21 +9,23 @@ const Button = (props) =>{
 }
 const styling = StyleSheet.create({
 button:{
+    height:45,
     marginRight : 5,
     marginLeft : 5, 
     borderWidth : 3,
     borderRadius : 5,
-    backgroundColor :'#FEF4E8',
+    backgroundColor :'rgb(42, 55, 68)',
     alignSelf : 'stretch',
-    borderColor: '#970747' 
+    flex:1
     },
     text:{
     alignSelf:'center',
-    color:'#1989AC',
+    color:'#fff',
     fontSize:16,
     fontWeight:'500',
     paddingTop:10,
     paddingBottom:10
+    
 }
 });
-export default Button;
+export  {Button};
